@@ -1,0 +1,1160 @@
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/GolosText-Medium.woff2') format('woff2'), url('../fonts/GolosText-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/GolosText-SemiBold.woff2') format('woff2'), url('../fonts/GolosText-SemiBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/GolosText-Regular.woff2') format('woff2'), url('../fonts/GolosText-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/GolosText-Bold.woff2') format('woff2'), url('../fonts/GolosText-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Merriweather-Regular.woff2') format('woff2'), url('../fonts/Merriweather-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Merriweather-Bold.woff2') format('woff2'), url('../fonts/Merriweather-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2'), url('../fonts/Montserrat-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+:root {
+  --font-family: "Golos Text", sans-serif;
+  --second-family: "Merriweather", sans-serif;
+  --third-family: "Montserrat", sans-serif;
+  --transition-duration: .4s;
+  --color-white: #fff;
+  --color-mineShaft: #313131;
+  --color-pearlBush: #e9ded4;
+  --color-mineShaft1F: #1f1f1f;
+  --color-saffronMango: #fbce51;
+  --color-alto: #d6d6d6;
+  --color-altoD0: #d0d0d0;
+  --color-azure: #3057a2;
+  --color-flamingo: #f54932;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  /*Для .wrapper Это будет нужно для footer*/
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 5vw, 20px);  
+  line-height: 1.2;
+  color: var(--color-mineShaft);
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  /* перенос слов */
+  word-wrap: break-word;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  /*стрелки у слайдера*/
+  background-color: inherit;
+  border: none;
+}
+
+.btn {
+  margin-bottom: 5px;
+  padding: 14px 40px;
+  border-radius: 66px;
+  border: 2px solid var(--color-mineShaft1F);
+  max-width: 263px;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--color-white);
+  background-color: var(--color-mineShaft1F);
+  outline: none;
+  -webkit-transition: all var(--transition-duration);
+  -ms-transition: all var(--transition-duration);
+  -moz-transition: all var(--transition-duration);
+  -o-transition: all var(--transition-duration);
+  transition: all var(--transition-duration);
+  cursor: pointer;
+}
+
+.btn:focus, .btn_transparent {
+  border: 2px solid var(--color-mineShaft1F);
+  color: var(--color-mineShaft1F);
+  background-color: transparent;
+}
+
+.btn:hover, .btn_transparent:focus {
+  border: 2px solid var(--color-saffronMango);
+  color: var(--color-mineShaft1F);
+  background-color: var(--color-saffronMango);
+}
+
+.btn:active {
+  opacity: .7;
+}
+
+.btn_transparent {
+  border: 2px solid var(--color-mineShaft1F);
+  color: var(--color-mineShaft1F);
+  background-color: transparent;
+}
+
+.btn_transparent:hover {
+  border: 2px solid var(--color-mineShaft1F);
+  color: var(--color-white);
+  background-color: var(--color-mineShaft1F);
+}
+
+.btn_moreDetailed {
+  border: 1px solid var(--color-azure);
+  border-radius: 62px;
+  padding: 8px 12px;
+  color: var(--color-azure);
+  background-color: transparent;
+}
+
+.btn_moreDetailed:focus {
+  border: 1px solid var(--color-mineShaft1F);
+  color: var(--color-white);
+  background-color: var(--color-mineShaft1F);
+}
+
+.btn_moreDetailed:hover {
+  border: 1px solid var(--color-azure);
+  color: var(--color-white);
+  background-color: var(--color-azure);
+}
+
+.btn:not(:last-child) {
+  margin-right: 12px;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+[class*="__container"] {
+  /*1630px = 1530px + 50px + 50px не менять!*/
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 50px;
+}  
+
+.h2 {
+  font-family: var(--second-family);
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.h3 {  
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.desc {
+  font-size: 20px;
+  font-weight: 400;
+} 
+
+/* Микс-шаблон Бегущая строка 1920px */
+.runningLine {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  background: var(--color-flamingo);
+  overflow: hidden;
+}
+
+.runningLine__list {
+  flex-shrink: 0;
+  display: flex;
+  gap: 10px;
+  margin: 17.7px 0;
+  padding: 0 120% 0 100%;
+  width: 150%;
+}
+
+.runningLine__item {
+  flex: 0 0 auto;
+  display: flex;
+  font-size: clamp(16px, 5vw, 22px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-white);
+  text-transform: uppercase;
+  transition: all 0.1s ease-in-out;
+}
+
+.runningLine__item:hover {
+  transform: scale(1.03);
+}
+
+.marquee {
+  animation: scroll 20s linear infinite;
+}
+
+.runningLine:hover .marquee {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+/* Шаблон таблицы 1920px */
+table {
+  border-collapse: collapse;
+  width: 100%; 
+}
+
+caption {
+  padding-top: 33px;
+  font-size: clamp(18px, 5vw, 20px);
+  color: var(--color-azure);
+  caption-side: bottom; /* Расположение снизу */
+  text-align: start;
+}
+
+tr { 
+  border-bottom: 2px solid var(--color-altoD0);
+}
+
+tr:last-child {  
+  border-bottom: 2px solid transparent;
+}
+
+tr:first-child td, tr:first-child th { 
+  padding: 0 0 14px;
+}
+
+tr:nth-child(n+2) td, tr:nth-child(n+2) th {
+  padding: 16px 0 14px; 
+}
+
+td {
+  width: 43.5%;
+  border-right: 2px solid var(--color-altoD0);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+th {
+  position: relative;
+  left: 14px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: start;
+}
+
+th span {
+  position: relative;
+  text-decoration: none;
+}
+
+th span:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background: var(--color-flamingo);
+  /* transform: rotate(-1deg); */
+}
+/* // Шаблон таблицы 1920px */
+
+/* Шаблон кнопок у слайдера 1920px */
+.navigation-template {
+  display: inline-flex;
+  align-items: center;
+}
+
+.pagination-template {
+  /*1/6*/
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px; 
+  line-height: 1.2;
+}
+
+.pagination-template .swiper-pagination-bullet-active {
+  /*Сменили цвет круглишей в слайдере*/
+  background-color: var(--color-mineShaft);
+}
+
+.button-template {
+  position: relative;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-mineShaft);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all var(--transition-duration);
+  -ms-transition: all var(--transition-duration);
+  -moz-transition: all var(--transition-duration);
+  -o-transition: all var(--transition-duration);
+  transition: all var(--transition-duration);
+  cursor: pointer;
+}
+
+.button-template:focus {
+  border-radius: 50%;
+  background-color: #666;
+  outline: none;
+}
+
+.button-template:hover {
+  background-color: var(--color-saffronMango);
+}
+
+.button-template:active {
+  opacity: .7;
+}
+
+.button-template:disabled {
+  background-color: var(--color-alto);
+}
+
+.button-template::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transform-origin: center;
+}
+
+.button-template_prev {
+  margin-right: 13px;
+}  
+
+.button-template_next { 
+  margin-left: 13px;
+}
+
+.button-template_next::before {
+  position: absolute;
+  right: 0;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.button-template_prev::before {
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+/* // Шаблон кнопок у слайдера 1920px */
+
+
+/* Шапка header-1920px*/
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 27px 0;
+  width: 100%;
+}
+
+.header__container {
+  padding-left: 204px;
+}
+
+.header__logo {
+  -ms-transition: all var(--transition-duration);
+  -moz-transition: all var(--transition-duration);
+  -o-transition: all var(--transition-duration);
+  transition: all var(--transition-duration);
+  cursor: pointer;
+}
+
+.header__logo:focus {
+  outline: 2px solid var(--color-flamingo);
+  outline-offset: 8px;
+}
+
+.header__logo:hover {
+  opacity: .8;
+}
+
+.header__logo:active {
+  opacity: .6;
+}
+/* // Шапка header-1920px*/
+
+/* hero-1920px*/
+.hero {
+  /* padding-top: 140px; */
+  overflow: hidden;
+  width: 100%;
+  background: url("../img/background-1920.png") center / cover no-repeat;
+  background-color: var(--color-pearlBush);
+}
+
+.hero__container {
+  /* margin-top: -140px; */
+  padding-left: 204px;
+  background: url("../img/shapes-1920.png") center / cover no-repeat;
+}
+
+.hero__width {
+  padding: 75px 0 124px;
+  width: 545px;
+}
+
+.hero__h2 {
+  margin-bottom: 23px;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.1;
+  color: #313131;
+}
+
+.hero__desc {
+  margin-bottom: 39px;
+  font-size: 18px;
+  line-height: 1.3;
+  text-align: center;
+}
+/* // hero-1920px*/
+
+/* Турнир(tournament)-1920px */
+.tournament {
+  padding: 72px 0;
+}
+
+.tournament__flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.tournament__flex:nth-child(odd) .tournament__h3 {
+  margin: 27px 0 63px;
+  width: 100%;
+}
+
+.tournament__flex:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.tournament__h3 {
+  width: 62%;
+  font-family: var(--second-family);
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.tournament__h3 .red {
+  font-weight: 700;
+  color: var(--color-flamingo);
+}
+
+.tournament__h3_none1920 {
+  display: none;
+}
+
+.tournament__imgTop {
+  margin-top: 8px;
+  height: 250px;
+}
+
+.tournament__imgBottom {
+  margin-left: -27px;
+}
+
+.tournament__info .kopNone1920 {
+  display: none;
+}
+/* // Турнир(tournament)-1920px */
+
+/* Этапы(stages)-1920px */
+.stages {
+  padding: 71px 0 80px;
+}
+
+.stages__container {
+  position: relative;
+}
+
+.stages__h2 {
+  margin-bottom: 54px;
+  width: 707px;
+}
+
+.stages__h2::after {
+  content: 'Будущие источники обогащения васюкинцев'; /* Добавляемый текст */
+  display: inline-block;
+  margin-left: 7px;
+  width: 252px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: clamp(18px, 5vw, 20px); 
+  line-height: 1.2;
+  color: var(--color-azure);
+  text-transform: none;
+}
+
+.stages__list {
+  counter-reset: myCounter;/*нумерация*/ 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 18px 21px;
+  padding: 0;
+}
+
+.stages__item {
+  padding: 27px 14px 20px 35px;
+  display: block;
+  position: relative;
+  line-height: 17px;
+  background: url("../img/background.jpg") center / cover no-repeat;
+}
+
+.stages__item::before {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  counter-increment: myCounter;/*нумерация*/ 
+  content: counter(myCounter);/*нумерация*/ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  color: #313131;
+  background: #fff;
+}
+
+.stages__item:nth-child(3) {
+  grid-row: span 2;
+  grid-gap: 25px;
+}
+
+.stages__item:nth-child(7) {
+  grid-column: span 2;
+  grid-gap: 25px;
+}
+
+.stages__desc {
+  margin: -6px 0 0;
+  padding-left: 38px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: clamp(18px, 5vw, 20px);
+  line-height: 1.2;
+}
+
+.stages__item:last-child .stages__desc {
+  width: 65%;
+}
+
+.stages__img {
+  position: absolute;
+  right: 11px;
+  bottom: -13px;
+  width: 400px;
+  height: 205px;
+  background: url("../img/plane.png") center / cover no-repeat;
+  z-index: 1;
+}
+
+.stages__none1920 {
+  display: none;
+}
+
+/*Слайдер*/
+.stages__center {
+  display: flex;
+  justify-content: center;
+}
+/* // Этапы(stages)-1920px */
+
+
+/* Участники турнира(participants)-1920px  */
+.participants {
+  padding: 80px 0 0;
+}
+
+.participants__container {
+  position: relative;
+}
+
+.participants__swiper {
+  overflow: hidden;
+}
+
+.participants__h2 {
+  margin-bottom: 40px;
+}
+
+.participants__list {
+  display: flex;  
+  padding: 0;
+}
+
+.participants__list .swiper-slide {
+  /*резина при пополнения*/
+  height: auto;
+} 
+
+.participants__item {
+  display: flex;/*Для выравнивание карточек participants__block*/
+  flex-direction: column;/*Для выравнивание карточек participants__block*/
+}
+
+.participants__img {
+  margin: 0 auto;
+}
+
+.participants__block { 
+  position: relative; /*Для кнопки*/ 
+  display: flex;/*Для выравнивание карточек li*/
+  justify-content: space-between;/*Для выравнивание карточек li*/
+  flex-direction: column;/*Для выравнивание карточек li*/
+  padding: 5px 0; 
+  height: 100%;/*Для выравнивание карточек li*/
+}
+
+.participants__action {
+  margin: 0 auto;
+}
+
+.participants__h3 {
+  margin-bottom: 8px;
+  font-family: var(--font-family);
+  line-height: 1.2;
+  text-transform: none;
+  text-align: center;
+}
+
+.participants__desc {
+  margin: 0 0 23px;
+  text-align: center;
+}
+
+.participants__navigation {
+  position: absolute;
+  top: 10px;
+  right: 74px;
+}
+
+.participants__runningLine {
+  margin-top: 121px;
+}
+/* Участники турнира(participants)-1920px  */
+
+/* Подвал(footer)-1920px */
+.footer {
+  padding: 25px 0 55px;
+  background: var(--color-pearlBush);
+}
+
+.footer__desc {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.6;
+}
+/* // Подвал(footer)-1920px */
+
+@media (max-width: 1440px) {
+  [class*="__container"] {
+    padding: 0 71px;
+  }
+
+  /* Турнир(tournament)-1440px */
+  .tournament__h3 {
+    font-size: clamp(28px, 5vw, 36px);
+  }
+  /* // Турнир(tournament)-1440px */
+
+}
+
+@media (max-width: 1212px) {
+  .btn_transparent {
+    background-color: #fff;
+    opacity: 0.9;
+  }
+
+  td, th {
+    width: 50%;
+  }
+
+  /* Турнир(tournament)-1200px */
+  .tournament__flex:last-child {
+    display: block;
+  }
+
+  .tournament__flex:last-child img {
+    margin: 0 auto;
+    display: block;
+    width: 500px;
+  }
+  /* // Турнир(tournament)-1200px */
+
+  /* Этапы(stages)-1200px */
+  .stages__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stages__item:nth-child(3) {
+    grid-row: none;
+  }
+
+  .stages__img {
+    right: 0px;
+    bottom: -37px;
+  }
+  /* // Этапы(stages)-1200px */
+}
+
+@media (max-width: 1024px) {
+  [class*="__container"] {
+    padding: 0 45px;
+  }
+
+  .tournament {
+    padding: 42px 0;
+  }
+
+  .tournament__h3 {
+    width: 100%;
+  }  
+
+  .tournament__h3_none1024 {
+    display: none;
+  }
+
+  .tournament__flex, .tournament__h3_none1920 {
+    display: block;
+  }
+  
+  .tournament__imgTop {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Этапы(stages)-1024px */
+  .stages__h2 {
+    width: 100%;
+  }
+
+  .stages__list {
+    display: block;
+  }
+
+  .stages__item {
+    padding: 25px;
+  }  
+
+  .stages__item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  .stages__item:last-child .stages__desc {
+    width: 100%;
+  }
+
+  .stages__desc {
+    margin: 0;
+    padding-left: 48px;
+  }  
+  
+  .stages__desc br {
+    display: none;
+  }
+
+  .stages__img {
+    bottom: -107px;
+    width: 303px;
+    height: 161px;
+  }
+  /* // Этапы(stages)-1024px */
+
+
+}
+
+@media (max-width: 777px) {
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  td {
+    border-right: 2px solid transparent;
+    width: 100%;
+  }
+  
+  th {
+    left: 0;
+    width: 100%;
+  }
+
+  
+  .participants__center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .participants__navigation {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 555px) {
+  [class*="__container"] {
+    padding: 0 20px;
+  }
+
+  .btn {
+    margin-bottom: 15px;
+    padding: 11px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .btn:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .button-template {
+    width: 36px;
+    height: 36px;
+  }  
+
+  .runningLine__list {
+    margin: 8.5px 0;
+  }
+
+  /* Шапка header-555px*/
+  .header {
+    padding: 16px 0;
+  }
+
+  .header__logo .logo {
+    width: 212px;
+  }
+  /* // Шапка header-555px*/
+
+  /* hero-555px*/
+  .hero__container {
+    position: relative;
+    background: none;
+  }
+
+  .hero__container::after {
+    content: "";
+    position: absolute;
+    bottom: -115px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background: url("../img/shapes-375.png") center / contain no-repeat;
+  }
+
+  .hero__width {
+    position: relative;
+    padding: 58px 0 275px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .hero__desc {
+    margin-bottom: 34px;
+    text-align: start;
+  }
+  /* // hero-555px*/
+
+  .tournament {
+    padding: 21px 0 46px;
+  }
+
+  .tournament__imgTop {
+    margin-top: -3px;
+    height: 211px;
+  }
+
+  .tournament__flex:last-child img {
+    width: 100%;
+    height: 407px;
+  }
+
+  .tournament__info tr:first-child td {
+    margin-top: -20px;
+    padding: 0 0 12px;
+  }
+
+  .tournament__info tr:nth-child(n+2) td {
+    padding: 16px 0 13px;
+  }
+
+  .tournament__info tr:nth-child(n+2) th {
+    padding: 0 0 14px;
+  }
+
+  .tournament__info .kopNone1920 {
+    display: inline-flex;
+  }
+
+  .tournament__info caption {
+    padding-top: 22px;
+    font-size: 18px;
+  }  
+
+  .tournament__flex .kopNone555 {
+    display: none;
+  }
+
+
+  .stages {
+    padding: 46px 0;
+  }
+
+  .stages__h2 {
+    margin-bottom: 125px;
+    line-height: 1.1; 
+  }
+
+  .stages__h2::after {
+    margin: 15px 0 0;
+    width: 100%;
+  }  
+
+  .stages__swiper {
+    overflow: hidden;
+  }
+
+  .stages__list .swiper-slide {
+    /*Задала общую ширину и высоту списку слайдера, без него ломает*/
+    flex-shrink: unset;
+    height: auto;
+    background: url("../img/background.jpg") center / cover no-repeat;
+  }
+
+  .stages__none1920 {
+    display: block;
+  }
+
+  .stages__list {
+    display: flex;
+    gap: 0;
+    margin-bottom: 27px;
+  }
+
+  .stages__none555 {
+    display: none;
+  }
+
+  .stages__markerNone {
+    list-style-type: none;
+  }
+  
+  .stages__item {
+    padding: 62px 13px 10px;
+    width: 86%;
+    height: auto;
+    background: none;
+  }
+
+  .stages__item::before {
+    top: 62px;
+  }  
+
+  .stages__item .stages__desc, .stages__item:last-child .stages__desc, .stages__list .stages__desc_three-555 {
+    width: 250px;
+    text-align: start;
+  }
+
+  .stages__desc {
+    padding-left: 61px;
+  }
+
+  .stages__list .stages__item_marginNone, .stages__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .stages__sublist {
+    padding: 0;
+  }
+
+  .stages__sublist .stages__item_marginNone {
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+
+  .stages__sublist .stages__item_marginNone::before {
+    top: 17px;
+  }
+
+  .stages__img {
+    top: 29.5%;
+    bottom: 0;
+    left: 28px;
+    width: 341px;
+    height: 185px;
+    background: url("../img/plane-375.png") center / cover no-repeat;
+  }
+
+
+  .participants {
+    padding: 44px 0 0;
+  }  
+
+  .participants__h2 {
+    margin-bottom: 22px;
+    line-height: 1.1;
+  }
+
+  .participants__list {
+    margin-bottom: 40px;
+  }
+
+  .participants__img {
+    margin: 0 auto;
+    width: 73%;
+  }
+
+  .participants__desc {
+    margin: 0 0 25px;
+  }
+
+  .participants__btn {
+    padding: 8px 11px;
+  }
+
+  .participants__runningLine {
+    margin-top: 101px;
+  }
+
+  .footer {
+    padding: 25px 0 40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************/
+
+
+
+
+
+
+
+
+
+
+
+
