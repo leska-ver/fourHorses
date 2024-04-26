@@ -194,10 +194,6 @@ button {
   background-color: var(--color-azure);
 }
 
-.btn:not(:last-child) {
-  margin-right: 12px;
-}
-
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -504,10 +500,30 @@ th span:before {
   color: #313131;
 }
 
+.hero__h2 span {
+  margin-left: 17%;
+}
+
+.hero__h2 .probel {
+  margin-left: 6%;
+}
+
 .hero__desc {
   margin-bottom: 39px;
   font-size: 18px;
   line-height: 1.3;
+  text-align: center;
+}
+
+.hero__btns {
+  display: -ms-grid;
+  display: grid;
+  -webkit-grid-template-columns: repeat(2, 1fr);
+  -o-grid-template-columns: repeat(2, 1fr);
+  -moz-grid-template-columns: repeat(2, 1fr);
+  -ms-grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
   text-align: center;
 }
 /* // hero-1920px*/
@@ -592,7 +608,12 @@ th span:before {
 
 .stages__list {
   counter-reset: myCounter;/*нумерация*/ 
+  display: -ms-grid;
   display: grid;
+  -webkit-grid-template-columns: repeat(3, 1fr);
+  -o-grid-template-columns: repeat(3, 1fr);
+  -moz-grid-template-columns: repeat(3, 1fr);
+  -ms-grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 18px 21px;
   padding: 0;
@@ -792,6 +813,10 @@ th span:before {
 
   /* Этапы(stages)-1200px */
   .stages__list {
+    -webkit-grid-template-columns: repeat(2, 1fr);
+    -o-grid-template-columns: repeat(2, 1fr);
+    -moz-grid-template-columns: repeat(2, 1fr);
+    -ms-grid-template-columns: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -816,6 +841,10 @@ th span:before {
     padding: 0 150%;
   }
 
+
+  .hero__width {
+    width: 60%;
+  }
 
   /* Турнир(tournament)-1024px */
   .tournament {
@@ -901,6 +930,19 @@ th span:before {
   }
 
   
+  .hero__btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__btns .btn {
+    max-width: 333px;
+  }
+
+  .hero__width {
+    width: 70%;
+  }
+  
   .participants__center {
     display: flex;
     justify-content: center;
@@ -923,10 +965,6 @@ th span:before {
     padding: 11px;
     max-width: 100%;
     width: 100%;
-  }
-
-  .btn:not(:last-child) {
-    margin-right: 0;
   }
 
   .button-template {
@@ -968,18 +1006,30 @@ th span:before {
 
   .hero__width {
     position: relative;
-    padding: 60px 0 275px;
+    padding: 60px 0 290px;
     width: 100%;
     z-index: 1;
   }
 
   .hero__h2 {
     margin-bottom: 25.5px;
+  }  
+
+  .hero__h2 span {
+    margin-left: 19%;
+  }
+
+  .hero__h2 .probel {
+    margin-left: 9%;
   }
 
   .hero__desc {
     margin-bottom: 32px;
     text-align: start;
+  }
+
+  .hero__btns .btn {
+    margin: 0;
   }
   /* // hero-555px*/
 
@@ -1103,9 +1153,9 @@ th span:before {
   }
 
   .stages__img {
-    top: 29.3%;
+    top: 28.7%;
     bottom: 0;
-    left: 28px;
+    right: 5px;
     width: 341px;
     height: 185px;
     background: url("../img/plane-375.png") center / cover no-repeat;
