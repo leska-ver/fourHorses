@@ -1063,6 +1063,7 @@ th span:before {
 
   .tournament__info .kopNone1920 {
     display: inline-flex;
+    font-weight: 600;
   }
 
   .tournament__info caption {
