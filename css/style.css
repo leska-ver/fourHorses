@@ -791,6 +791,7 @@ th span:before {
 
 @media (max-width: 1212px) {
   .btn_transparent {
+    border: 2px solid var(--color-white);
     background-color: #fff;
     opacity: 0.9;
   }
