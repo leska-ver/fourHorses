@@ -253,6 +253,7 @@ button {
   display: flex;
   gap: 10px;
   margin: 17.7px 0;
+  /*padding для читабельности текста*/
   padding: 0 120% 0 100%;
   width: 150%;
 }
@@ -811,6 +812,13 @@ th span:before {
     padding: 0 45px;
   }
 
+  .runningLine__list {
+    /*padding для читабельности текста*/
+    padding: 0 150%;
+  }
+
+
+  /* Турнир(tournament)-1024px */
   .tournament {
     padding: 42px 0;
   }
@@ -831,6 +839,7 @@ th span:before {
     display: block;
     margin: 0 auto;
   }
+  /* // Турнир(tournament)-1024px */
 
   /* Этапы(stages)-1024px */
   .stages__h2 {
@@ -888,6 +897,11 @@ th span:before {
     width: 100%;
   }
 
+  .runningLine__list {
+    /*padding для читабельности текста*/
+    padding: 0 250%;
+  }
+
   
   .participants__center {
     display: flex;
@@ -924,6 +938,8 @@ th span:before {
 
   .runningLine__list {
     margin: 8.5px 0;
+    /*padding для читабельности текста*/
+    padding: 0 414%;
   }
 
   /* Шапка header-555px*/
