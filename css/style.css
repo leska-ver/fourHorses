@@ -599,7 +599,7 @@ th span:before {
 }
 
 .stages__item {
-  padding: 27px 14px 20px 35px;
+  padding: 27px 15px 20px 73px;
   display: block;
   position: relative;
   line-height: 17px;
@@ -637,10 +637,9 @@ th span:before {
 
 .stages__desc {
   margin: -6px 0 0;
-  padding-left: 38px;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: clamp(18px, 5vw, 20px);
+  font-size: clamp(18px, 4vw, 20px);
   line-height: 1.2;
 }
 
@@ -851,7 +850,7 @@ th span:before {
   }
 
   .stages__item {
-    padding: 25px;
+    padding: 25px 25px 25px 73px;
   }  
 
   .stages__item:not(:last-child) {
@@ -859,12 +858,11 @@ th span:before {
   }
 
   .stages__item:last-child .stages__desc {
-    width: 100%;
+    width: unset;
   }
 
   .stages__desc {
     margin: 0;
-    padding-left: 48px;
   }  
   
   .stages__desc br {
@@ -1041,8 +1039,7 @@ th span:before {
   }
 
   .stages__list .swiper-slide {
-    /*Задала общую ширину и высоту списку слайдера, без него ломает*/
-    flex-shrink: unset;
+    /*Задала общую высоту списку слайдера, без него ломает*/
     height: auto;
     background: url("../img/background.jpg") center / cover no-repeat;
   }
@@ -1066,8 +1063,7 @@ th span:before {
   }
   
   .stages__item {
-    padding: 62px 13px 10px;
-    width: 86%;
+    padding: 62px 0 10px;
     height: auto;
     background: none;
   }
@@ -1076,13 +1072,9 @@ th span:before {
     top: 62px;
   }  
 
-  .stages__item .stages__desc, .stages__item:last-child .stages__desc, .stages__list .stages__desc_three-555 {
-    width: 250px;
-    text-align: start;
-  }
-
   .stages__desc {
-    padding-left: 61px;
+    padding-left: 73px;
+    padding-right: 20px;
   }
 
   .stages__list .stages__item_marginNone, .stages__item:not(:last-child) {

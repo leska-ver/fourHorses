@@ -15,7 +15,6 @@
 3. Задала общую ширину и высоту списку слайдера, без него ломает. Фон в слайдере перенесла суда.
 ```
 .stages__list .swiper-slide {
-  flex-shrink: unset;
   height: auto;
   background: url("../img/background.jpg") center / cover no-repeat;
 }
@@ -28,6 +27,18 @@
   height: auto;
 }
 ```
+5. Боковые паддинги в слайдере лучше ставить таксту, иначе блок li будет лесть к соседу. Ширину в слайдере не ставим!!!
+```
+.stages__item {
+  padding: 62px 0 10px;
+  height: auto;
+  background: none;
+}
+.stages__desc {
+  padding-left: 73px;
+  padding-right: 20px;
+}
+``` 
 Сайт - https://leska-ver.github.io/fourHorses/
 
 ```
