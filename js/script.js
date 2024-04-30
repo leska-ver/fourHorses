@@ -38,6 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
         spaceBetween: 20,
         slidesPerView: 3
       },
+    },
+    //Бесконечное листание страниц
+    speed: 4000, //Интервал ожидания
+
+    autoplay: {
+      delay: 4000, //Интервал ожидания
+      disableOnInteraction: false,
     }
   });
   
